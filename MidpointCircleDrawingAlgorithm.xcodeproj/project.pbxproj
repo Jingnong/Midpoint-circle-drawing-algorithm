@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8039C0A91F81998F00F7939B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8039C0A81F81998F00F7939B /* main.cpp */; };
+		8039C0B11F8199C300F7939B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8039C0B01F8199C200F7939B /* Cocoa.framework */; };
+		8039C0B31F8199DB00F7939B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8039C0B21F8199DB00F7939B /* OpenGL.framework */; };
+		8039C0B51F8199F000F7939B /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8039C0B41F8199F000F7939B /* libglfw.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		8039C0A51F81998F00F7939B /* assignment_1_Oct_1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = assignment_1_Oct_1; sourceTree = BUILT_PRODUCTS_DIR; };
 		8039C0A81F81998F00F7939B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8039C0B01F8199C200F7939B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8039C0B21F8199DB00F7939B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		8039C0B41F8199F000F7939B /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../../../../../usr/local/lib/libglfw.3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8039C0B51F8199F000F7939B /* libglfw.3.dylib in Frameworks */,
+				8039C0B31F8199DB00F7939B /* OpenGL.framework in Frameworks */,
+				8039C0B11F8199C300F7939B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				8039C0A71F81998F00F7939B /* assignment_1_Oct_1 */,
 				8039C0A61F81998F00F7939B /* Products */,
+				8039C0AF1F8199C200F7939B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +70,16 @@
 				8039C0A81F81998F00F7939B /* main.cpp */,
 			);
 			path = assignment_1_Oct_1;
+			sourceTree = "<group>";
+		};
+		8039C0AF1F8199C200F7939B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8039C0B41F8199F000F7939B /* libglfw.3.dylib */,
+				8039C0B21F8199DB00F7939B /* OpenGL.framework */,
+				8039C0B01F8199C200F7939B /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +253,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +263,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
